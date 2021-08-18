@@ -15,7 +15,7 @@
             try {
                 const response = await fetch(url, {
                     method: "POST",
-                    Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MjkyODg5MzYsImV4cCI6MTYzMDQ5ODUzNn0.Tl6n-9pAhga8-0iWcJ7fXujL2_qBuBjxYWyQkxNbNc4"
+                    Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MjkyODg5MzYsImV4cCI6MTYzMDQ5ODUzNn0.Tl6n-9pAhga8-0iWcJ7fXujL2_qBuBjxYWyQkxNbNc4",
                     body: JSON.stringify(myEvent),
                     headers: {
                         "Content-Type": "application/json",
@@ -25,6 +25,7 @@
                 if (response.ok) {
                     const respEvent = await response.json()
                     alert("Product was created successfully! " + respEvent._id)
+                    console.log(respEvent)
                 } else {
                     if (response.status >= 400 && response.status < 500) {                   // if status of response is within 400 and 500 (user error), throw below error
                         throw new Error("User generated error, verify the data that you are sending!")
