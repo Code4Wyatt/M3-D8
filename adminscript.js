@@ -40,6 +40,6 @@
                 alert(err.message)
             } 
 
-            console.log("last thing")
+           
 
         }
