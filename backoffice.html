@@ -15,36 +15,50 @@
   </head>
   <body>
     <div class="container">
-      <form>
+      <form onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label for="exampleInputEmail1">Product Name</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
-            id="exampleInputEmail1"
+            id="name"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea class="form-control" id="description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Brand</label>
+          <input
+            type="text"
+            class="form-control"
+            id="brand"
             aria-describedby="emailHelp"
           />
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Image URL</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" />
+          <input
+            id="imageUrl"
+            type="text"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
         </div>
         <div class="form-group">
-          <label for="exampleFormControlTextarea1">Description</label>
-          <textarea
+          <label for="exampleInputEmail1">Price</label>
+          <input
+            type="number"
             class="form-control"
-            id="exampleFormControlTextarea1"
-            rows="3"
-          ></textarea>
-        </div>
-        <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
+            id="price"
+            aria-describedby="emailHelp"
+          />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
+    <script src="adminscript.js"></script>
   </body>
 </html>

@@ -1,7 +1,9 @@
 window.onload = async () => {
     try {
         const response = await fetch("https://striveschool-api.herokuapp.com/api/product/");
-        "authorisation": bearer 
+        method: 'GET',
+    authorisation: bearer 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MjkyODg5MzYsImV4cCI6MTYzMDQ5ODUzNn0.Tl6n-9pAhga8-0iWcJ7fXujL2_qBuBjxYWyQkxNbNc4,
         if (response.ok) {
             const data = await response.json();
             console.log(data);
