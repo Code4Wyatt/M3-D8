@@ -1,5 +1,5 @@
 const handleSubmit = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
     
     const url = "https://striveschool-api.herokuapp.com/api/product/"
 
@@ -15,10 +15,11 @@ const handleSubmit = async (event) => {
     try {
         const response = await fetch(url, {
             method: "POST",
-            authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MjkyODg5MzYsImV4cCI6MTYzMDQ5ODUzNn0.Tl6n-9pAhga8-0iWcJ7fXujL2_qBuBjxYWyQkxNbNc4",
+            
             body: JSON.stringify(myProduct),
             headers: {
-                "content-type": "application/json",
+                "Content-Type": "application/json",
+                authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTFjZjllNzJkNTI2MjAwMTViNmRjYTIiLCJpYXQiOjE2MjkzNzE5NDIsImV4cCI6MTYzMDU4MTU0Mn0.Hkx4RB6mhAb2PvDCTK6p7W2Fe7IKxKfGllbs4jWQq84",
             }
         })
     } catch (err) {
